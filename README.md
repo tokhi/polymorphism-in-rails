@@ -41,7 +41,11 @@ class Product < ActiveRecord::Base
 end
 ```
 
-lets cerate a product and then add a picture:
+lets login to console and cerate a product and then add a picture:
+
+```bash
+rails c
+```
 
 ```ruby
 p=Product.new(owner: 'xyz')
