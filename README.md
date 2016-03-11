@@ -58,6 +58,22 @@ p.pictures << Picture.create(name: "xyz.jpg")
    (1.4ms)  commit transaction
  => true
 ```
+Lets add another model:
+
+ ```bash
+ rails g model user email
+ rake db:migrate
+```
+
+Modify the user model as below:
+
+```ruby
+class User < ActiveRecord::Base
+  has_one :picture, as: :imageable
+end
+
+```
+Lets play with the new model:
 
 ```ruby
 1.9.3-p545 :001 > u = User.new
