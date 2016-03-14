@@ -63,7 +63,8 @@ lets login to console and cerate a product and then add a picture:
 rails c
 ```
 
-```ruby1.9.3-p545 :019 >   p=Product.new(owner: 'xyz')
+```ruby
+1.9.3-p545 :019 >   p=Product.new(owner: 'xyz')
  => #<Product id: nil, created_at: nil, updated_at: nil, owner: "xyz">
 1.9.3-p545 :020 > p.pictures << Picture.create(name: "xyz.jpg")
    (0.1ms)  begin transaction
