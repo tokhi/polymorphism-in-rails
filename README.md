@@ -2,6 +2,7 @@
 
 A slightly more advanced twist on associations is the polymorphic association. With polymorphic associations, a model can belong to more than one other model, on a single association. For example, you might have a picture model that belongs to either an employee model or a product model. Here's how this could be declared.
 
+This is the improved version which stores the Picture details in a sperate model called `file_assets` if you want to have a basic version without the `file_asset`, check [this branch](https://github.com/tokhi/polymorphism-in-rails/tree/v0).
 lets create the models:
 
 ```bash
