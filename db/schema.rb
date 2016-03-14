@@ -11,15 +11,25 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160311165712) do
+ActiveRecord::Schema.define(version: 20160314100431) do
 
   create_table "employees", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
+  create_table "file_assets", force: :cascade do |t|
+    t.string   "path"
+    t.string   "content_type"
+    t.string   "permission"
+    t.string   "filename"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+  end
+
   create_table "pictures", force: :cascade do |t|
     t.string   "name"
+    t.integer  "file_asset_id"
     t.integer  "imageable_id"
     t.string   "imageable_type"
     t.datetime "created_at",     null: false
